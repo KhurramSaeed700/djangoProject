@@ -2,7 +2,7 @@ import constant as const
 import os
 from selenium import webdriver
 
-from selenium.booking_filtration import BookingFiltration
+from booking_filtration import BookingFiltration
 
 
 class Booking(webdriver.Chrome):
@@ -84,3 +84,6 @@ class Booking(webdriver.Chrome):
 
     def apply_filtration(self):
         filter = BookingFiltration(driver=self)
+        filter.apply_star_rating(3, 4, 5)
+        filter.set_price_low_to_high()
+        self.find_element_by_tag_name('body').send_keys(Keys.COMMAND + 't')
