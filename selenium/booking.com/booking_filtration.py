@@ -23,4 +23,3 @@ class BookingFiltration:
         )
         lowToHighElement.click()
 
-#

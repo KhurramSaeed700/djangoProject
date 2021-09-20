@@ -86,4 +86,4 @@ class Booking(webdriver.Chrome):
         filter = BookingFiltration(driver=self)
         filter.apply_star_rating(3, 4, 5)
         filter.set_price_low_to_high()
-        self.find_element_by_tag_name('body').send_keys(Keys.COMMAND + 't')
+        # self.find_element_by_tag_name('body').send_keys(Keys.COMMAND + 't')
